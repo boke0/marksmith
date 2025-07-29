@@ -2,11 +2,12 @@ output.txt
 node_modules
 dist
 .mastra
-.marksmith
+.repocks
 .env.development
 .env
+.mcp.json
 *.db
 *.db-*
-marksmith.config.json
+repocks.config.json
 .claude/settings.local.json
 CLAUDE.local.md

@@ -3,6 +3,7 @@ import { Agent } from '@mastra/core/agent';
 import { Env } from '../../env.js';
 import { ollama } from '../../ollama.js';
 import { documentQueryTool } from '../tools/documentQueryTool.js';
+import { indexingTool } from '../tools/indexingTool.js';
 
 export const ragAgent = new Agent({
   name: 'RAG Agent',
@@ -13,9 +14,11 @@ export const ragAgent = new Agent({
 - Always cite source: "According to [document]..."
 - Create proposals based ONLY on retrieved document content.
 - Do NOT add external knowledge or assumptions.
-- Acknowledge when information is incomplete.`,
+- Acknowledge when information is incomplete.
+- Use IndexTool to re-index documents when updates need to be reflected in search results.`,
   model: ollama(Env.ollamaLLM),
   tools: {
-    documentQueryTool
+    documentQueryTool,
+    indexingTool,
   }
 })
