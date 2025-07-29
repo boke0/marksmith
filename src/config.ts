@@ -7,11 +7,11 @@ export type CliConfig = {
 export const loadConfig = () => {
   let cliConfigFile = '{}';
   try{
-    cliConfigFile = fs.readFileSync(`./marksmith.config.json`, 'utf-8')
+    cliConfigFile = fs.readFileSync(`./repocks.config.json`, 'utf-8')
   }catch{}
   return {
     targets: [
-      "~/.marksmith/**/*.md",
+      "~/.repocks/**/*.md",
       "./docs/**/*.md",
     ],
     ...JSON.parse(cliConfigFile)

@@ -1,9 +1,9 @@
 {
-  "name": "marksmith",
+  "name": "repocks",
   "version": "1.0.0",
   "main": "./dist/mastra/index.js",
   "bin": {
-    "marksmith": "./dist/cli.js"
+    "repocks": "./dist/cli.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

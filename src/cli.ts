@@ -9,7 +9,7 @@ import { ollama } from './ollama.js';
 import { Env } from './env.js';
 import { CliConfig, loadConfig } from './config.js';
 
-const program = new Command('marksmith')
+const program = new Command('repocks')
   .description('A tool to turn project documents into a RAG & MCP server');
 
 program
@@ -24,7 +24,7 @@ program
     try {
       cliConfig = loadConfig()
     } catch {
-      console.error('Failed to load marksmith.config.ts.')
+      console.error('Failed to load repocks.config.ts.')
       return
     }
     const files = cliConfig.targets.flatMap(target => globSync(target))
@@ -84,7 +84,7 @@ program
     try {
       cliConfig = loadConfig()
     } catch {
-      console.error('Failed to load marksmith.config.ts.')
+      console.error('Failed to load repocks.config.ts.')
       return
     }
     server.startStdio().catch((error) => {

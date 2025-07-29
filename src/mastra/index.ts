@@ -4,7 +4,7 @@ import { ragAgent } from './agents/ragAgent.js';
 import { documentQueryTool } from './tools/documentQueryTool.js';
 
 export const server = new MCPServer({
-  name: 'MarkSmith',
+  name: 'Repocks',
   version: '1.0.0',
   agents: {
     ragAgent

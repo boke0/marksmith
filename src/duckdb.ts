@@ -16,7 +16,7 @@ export class DuckDBVector {
   private dbPath: string;
 
   constructor(options?: { path?: string }) {
-    const storePath = options?.path || path.join(process.cwd(), '.marksmith/store.duckdb')
+    const storePath = options?.path || path.join(process.cwd(), '.repocks/store.duckdb')
     fs.mkdirSync(path.dirname(storePath), {
       recursive: true
     })

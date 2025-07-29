@@ -1,10 +1,10 @@
-# MarkSmith
+# Repocks
 
-Transform your Markdown documentation into an intelligent knowledge base. MarkSmith indexes your documents and provides AI-powered search and Q&A capabilities through an MCP server.
+Transform your Markdown documentation into an intelligent knowledge base. Repocks indexes your documents and provides AI-powered search and Q&A capabilities through an MCP server.
 
-## What is MarkSmith?
+## What is Repocks?
 
-MarkSmith turns your collection of Markdown files into a searchable knowledge base that AI assistants can query. Whether you have technical documentation, meeting notes, or personal knowledge management files, MarkSmith makes them accessible through natural language queries.
+Repocks turns your collection of Markdown files into a searchable knowledge base that AI assistants can query. Whether you have technical documentation, meeting notes, or personal knowledge management files, Repocks makes them accessible through natural language queries.
 
 ### Key Benefits
 
@@ -25,8 +25,8 @@ MarkSmith turns your collection of Markdown files into a searchable knowledge ba
 ### Installation
 
 ```bash
-# Install MarkSmith
-npm install -g marksmith
+# Install Repocks
+npm install -g repocks
 
 # Download required AI models
 ollama pull qwen3:4b
@@ -37,13 +37,13 @@ ollama pull mxbai-embed-large
 
 1. **Index your documents:**
    ```bash
-   marksmith index
+   repocks index
    ```
    This scans your Markdown files and creates a searchable index.
 
 2. **Start the MCP server:**
    ```bash
-   marksmith start
+   repocks start
    ```
    Now your knowledge base is ready to answer questions!
 
@@ -51,11 +51,11 @@ ollama pull mxbai-embed-large
 
 ### Specifying Document Locations
 
-By default, MarkSmith indexes:
-- `~/.marksmith/**/*.md` (your personal notes)
+By default, Repocks indexes:
+- `~/.repocks/**/*.md` (your personal notes)
 - `./docs/**/*.md` (project documentation)
 
-To customize, create `marksmith.config.json`:
+To customize, create `repocks.config.json`:
 
 ```json
 {
@@ -84,7 +84,7 @@ export OLLAMA_BASE_URL="http://192.168.1.100:11434/api"
 
 ## Integration with Claude Desktop
 
-Add MarkSmith to your Claude Desktop configuration:
+Add Repocks to your Claude Desktop configuration:
 
 1. Open Claude Desktop settings
 2. Go to Developer > Model Context Protocol
@@ -93,8 +93,8 @@ Add MarkSmith to your Claude Desktop configuration:
 ```json
 {
   "mcpServers": {
-    "marksmith": {
-      "command": "marksmith",
+    "repocks": {
+      "command": "repocks",
       "args": ["start"]
     }
   }
@@ -122,21 +122,21 @@ Now you can ask Claude questions about your documentation!
 
 ## Commands Reference
 
-### `marksmith index`
+### `repocks index`
 Scans and indexes all Markdown files in configured paths. Run this:
 - After adding new documents
 - When you've made significant changes
 - To ensure your index is up-to-date
 
-### `marksmith start`
+### `repocks start`
 Starts the MCP server. Keep this running while using AI assistants.
 
 ## Troubleshooting
 
 ### "No documents found"
-- Check your `marksmith.config.json` paths
+- Check your `repocks.config.json` paths
 - Ensure `.md` files exist in those locations
-- Run `marksmith index` to rebuild the index
+- Run `repocks index` to rebuild the index
 
 ### "Cannot connect to Ollama"
 - Start Ollama: `ollama serve`
