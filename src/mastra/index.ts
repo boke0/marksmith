@@ -1,11 +1,15 @@
 import { MCPServer } from '@mastra/mcp';
 
-import { ragTool } from './tools/ragTool';
+import { ragAgent } from './agents/ragAgent.js';
+import { documentQueryTool } from './tools/documentQueryTool.js';
 
 export const server = new MCPServer({
   name: 'MarkSmith',
   version: '1.0.0',
+  agents: {
+    ragAgent
+  },
   tools: {
-    ragTool,
+    documentQueryTool,
   },
 });

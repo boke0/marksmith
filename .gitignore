@@ -2,7 +2,11 @@ output.txt
 node_modules
 dist
 .mastra
+.marksmith
 .env.development
 .env
 *.db
 *.db-*
+marksmith.config.json
+.claude/settings.local.json
+CLAUDE.local.md

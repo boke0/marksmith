@@ -1,6 +1,6 @@
 import { createOllama } from "ollama-ai-provider";
-import { Config } from './config';
+import { Env } from './env.js';
 
 export const ollama = createOllama({
-  baseURL: Config.ollamaBaseUrl,
+  baseURL: Env.ollamaBaseUrl,
 })
