@@ -20,5 +20,7 @@ export const ragAgent = new Agent({
   tools: {
     documentQueryTool,
     indexingTool,
+  },
+  defaultGenerateOptions: {
   }
 })
