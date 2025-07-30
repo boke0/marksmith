@@ -1,9 +1,9 @@
 import { duckdb } from "./duckdb.js"
 import { CliConfig, loadConfig } from "./config.js";
-import { globSync } from "glob";
 import * as fs from 'fs';
 import { ollama } from "./ollama.js";
 import { Env } from "./env.js";
+import untildify from "untildify";
 
 interface Result {
   upsertCount: number;
@@ -19,7 +19,7 @@ export const indexing = async (): Promise<Result> => {
   } catch {
     throw new Error('Failed to load repocks.config.ts.')
   }
-  const files = cliConfig.targets.flatMap(target => globSync(target))
+  const files = cliConfig.targets.flatMap(target => fs.globSync(untildify(target)))
 
   const pwd = process.cwd();
   // Initialize DuckDB
