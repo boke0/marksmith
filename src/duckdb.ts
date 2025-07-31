@@ -3,8 +3,6 @@ import * as fs from 'fs';
 import path from 'path';
 import lockfile from 'proper-lockfile';
 
-import { Env } from './env.js';
-
 export interface Document {
   id: string;
   content: string;
