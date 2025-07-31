@@ -47,6 +47,13 @@ ollama pull mxbai-embed-large
    ```
    Now your knowledge base is ready to answer questions!
 
+   We recommend registering with Coding Agent　(such as Claude Code, Cline, etc.) as shown in the example below.
+
+   ```bash
+   # Register mcp server in Claude Code
+   claude mcp add repocks -- repocks start
+   ```
+
 ## Configuration
 
 ### Specifying Document Locations
