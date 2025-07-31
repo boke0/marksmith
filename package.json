@@ -1,6 +1,6 @@
 {
   "name": "repocks",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "main": "./dist/mastra/index.js",
   "bin": {
     "repocks": "./dist/cli.js"
