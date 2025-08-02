@@ -1,5 +1,7 @@
 # Repocks
 
+![Repocks](./logo.jpg){ style="display: block; margin: 0 auto" }
+
 Transform your Markdown documentation into an intelligent knowledge base. Repocks indexes your documents and provides AI-powered search and Q&A capabilities through an MCP server.
 
 ## What is Repocks?
